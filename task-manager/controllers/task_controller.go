@@ -57,6 +57,7 @@ func GetTasks(c *gin.Context) {
 	id := c.Param("id")
 	if id == "" {
 		c.IndentedJSON(http.StatusOK, data.Tasks)
+		return
 	}
 
 	for _, task := range data.Tasks {
