@@ -1,0 +1,11 @@
+package models
+
+import "time"
+
+type Task struct {
+	ID          string    `json:"id" binding:"required"`
+	Title       string    `json:"title" binding:"required"`
+	Description string    `json:"description" binding:"required"`
+	DueDate     time.Time `json:"due_date"`
+	Status      string    `json:"status" binding:"required"`
+}
